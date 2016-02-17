@@ -1,25 +1,40 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="67" inline="true" x="56" y="63">
-    <value name="TIMES">
-      <block type="math_number" id="74">
-        <field name="NUM">2</field>
+  <block type="led_select" id="112" inline="true" x="52" y="33">
+    <field name="ACTION">ON</field>
+    <value name="LED">
+      <block type="math_number" id="128">
+        <field name="NUM">1</field>
       </block>
     </value>
-    <statement name="DO">
-      <block type="movement_forward" id="60">
+    <next>
+      <block type="oled_color" id="121">
+        <field name="OBJECT">GREEN</field>
         <next>
-          <block type="robot_delay" id="25" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="49">
-                <field name="NUM">5000</field>
+          <block type="controls_repeat" id="67" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="74">
+                <field name="NUM">2</field>
               </block>
             </value>
+            <statement name="DO">
+              <block type="movement_forward" id="60">
+                <next>
+                  <block type="robot_delay" id="25" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="49">
+                        <field name="NUM">5000</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="movement_stop" id="10"></block>
+            </next>
           </block>
         </next>
       </block>
-    </statement>
-    <next>
-      <block type="movement_stop" id="10"></block>
     </next>
   </block>
 </xml>
