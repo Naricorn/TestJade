@@ -64,10 +64,11 @@
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="controls_repeat" id="18" inline="true">
-                                        <value name="TIMES">
-                                          <block type="math_number" id="19">
-                                            <field name="NUM">2</field>
+                                      <block type="controls_whileUntil" id="30" inline="false">
+                                        <field name="MODE">UNTIL</field>
+                                        <value name="NUMBER">
+                                          <block type="sensor_button" id="37">
+                                            <field name="OBJECT">ENTER</field>
                                           </block>
                                         </value>
                                         <statement name="DO">
@@ -76,7 +77,7 @@
                                               <block type="robot_delay" id="21" inline="true">
                                                 <value name="DELAY">
                                                   <block type="math_number" id="22">
-                                                    <field name="NUM">2500</field>
+                                                    <field name="NUM">100</field>
                                                   </block>
                                                 </value>
                                               </block>
